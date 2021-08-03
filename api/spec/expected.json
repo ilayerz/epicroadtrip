@@ -1,0 +1,135 @@
+[
+    {
+        "type": "hostel",
+        "lat": "2.3514616",
+        "lng": "48.8566969",
+        "radius": "2000",
+        "expected": [
+            {
+              "position": {
+                "lat": 2.35614,
+                "lng": 48.852043
+              },
+              "xid": "H270729",
+              "name": "hotel du jeu de paume",
+              "rate": 6,
+              "distance": 621.14846676
+            },
+            {
+              "position": {
+                "lat": 2.341769,
+                "lng": 48.856701
+              },
+              "xid": "Q19348190",
+              "name": "25, place Dauphine",
+              "rate": 6,
+              "distance": 711.25742508
+            },
+            {
+              "position": {
+                "lat": 2.342753,
+                "lng": 48.853848
+              },
+              "xid": "Q655072",
+              "name": "Beat Hotel",
+              "rate": 8.5,
+              "distance": 713.34213667
+            },
+            {
+              "position": {
+                "lat": 2.364299,
+                "lng": 48.854172
+              },
+              "xid": "H304383",
+              "name": "sully hotel",
+              "rate": 6,
+              "distance": 982.99231571
+            }
+        ]
+    },
+    {
+        "type": "transport",
+        "lat": "2.3514616",
+        "lng": "48.8566969",
+        "radius": "100",
+        "expected": [
+            {
+              "position": {
+                "lat": 2.351203,
+                "lng": 48.857052
+              },
+              "xid": "N6694512049",
+              "name": "Simply France Tours",
+              "rate": 7.5,
+              "distance": 43.7641772
+            },
+            {
+              "position": {
+                "lat": 2.351534,
+                "lng": 48.8573
+              },
+              "xid": "N6435368573",
+              "name": "Place de l'Hôtel de Ville",
+              "rate": 7.5,
+              "distance": 67.44641195
+            }
+        ]
+    },
+    {
+        "type": "drink",
+        "lat": "2.3514616",
+        "lng": "48.8566969",
+        "radius": "300",
+        "expected": [
+            {
+              "position": {
+                "lat": 2.35045,
+                "lng": 48.854698
+              },
+              "xid": "Q3207592",
+              "name": "La Colombe",
+              "rate": 10,
+              "distance": 234.14828119
+            },
+            {
+              "position": {
+                "lat": 2.350278,
+                "lng": 48.854168
+              },
+              "xid": "Q22921407",
+              "name": "Débit de boisson",
+              "rate": 6,
+              "distance": 294.44458777
+            }
+        ]
+    },
+    {
+        "type": "restaurants",
+        "lat": "2.3514616",
+        "lng": "48.8566969",
+        "radius": "1000",
+        "expected": [
+            {
+              "properties": {
+                "lat": 48.861664,
+                "lng": 2.351312
+              },
+              "name": "Le Petit Marcel",
+              "rate": 1,
+              "distance": 1154.09487521,
+              "xid": "N1986782632"
+            }
+        ]
+    },
+    {
+      "type": "undefined",
+      "lat": "2.3514616",
+      "lng": "48.8566969",
+      "radius": "1000",
+      "expected": []
+    },
+    {
+      "type": "hostel",
+      "expected": []
+  }
+]

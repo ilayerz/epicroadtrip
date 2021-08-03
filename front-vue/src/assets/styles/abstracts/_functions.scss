@@ -1,0 +1,15 @@
+// n is number of stars generated
+@function generateStars ($n) {
+  $value: '#{0} #{random(2000)}px #{random(2000)}px #adf0ff';
+
+  @for $i from 2 through $n
+  {
+    $value: '#{$value} , #{random(2000)}px #{random(2000)}px #adf0ff';
+  }
+
+  @return unquote($value);
+}
+
+$stars-small:  generateStars(700);
+$stars-medium: generateStars(200);
+$stars-big:    generateStars(100);

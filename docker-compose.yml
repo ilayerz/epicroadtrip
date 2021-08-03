@@ -1,0 +1,47 @@
+# Use root/example as user/password credentials
+version: '3.1'
+
+services:
+
+  front:
+    build: ./front-vue
+    command: yarn run serve -- --port 8081
+    ports:
+      - "8081:8081"
+    volumes:
+      - ./front-vue:/usr/src/app
+
+  back:
+    build: ./api/
+    restart: always
+    depends_on:
+      - mariadb
+    links:
+      - mariadb
+    ports:
+      - 3000:3000
+    volumes: # For webpack dev server to use our local files
+      - ./api:/usr/src/app
+#    command: ["/usr/local/node/bin/npm sequelize db:create && npx sequelize-cli db:migrate"]
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    ports:
+      - 8000:80
+    environment:
+      - PMA_ARBITRARY=1
+      - PMA_HOST=mariadb
+    depends_on:
+      - mariadb
+
+  mariadb:
+    image: mariadb:10.4
+    restart: always
+    command: --init-file /data/application/init.sql
+    volumes:
+      - ./init.sql:/data/application/init.sql
+    environment:
+      MYSQL_ROOT_PASSWORD: "2@r/@&!Y4fat2Zx"
+      MYSQL_DATABASE: "epicroadtrip"
+    ports:
+      - 3306:3306

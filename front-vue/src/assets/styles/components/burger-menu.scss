@@ -1,0 +1,115 @@
+.menu-toggle-btn {
+  display: none;
+}
+@media (max-width: 414px) {
+  .menu-toggle-btn{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    position: absolute;
+    right: 19%;
+    top: 4.7%;
+    z-index: 12;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: column;
+
+    span{
+      background: $green-dark;
+      display: block;
+      width: 25px;
+      height: 3px;
+      border-radius: 5px;
+      margin-bottom: 5px;
+      -webkit-transition: all 0.5s linear;
+      transition: all 0.3s linear;
+    }
+    &.open{
+      span{
+        &:nth-child(1),
+        &:nth-child(3){
+          transform: translate(0px, 12px) rotate(-45deg);
+          margin: 0;
+        }
+        &:nth-child(2){
+          height: 0;
+          margin: 0;
+        }
+        &:nth-child(3){
+          transform: translate(0px, 9px) rotate(45deg);
+        }
+      }
+    }
+  }
+  .slide {
+    display: flex;
+    position: absolute;
+    background: $green-light;
+    top: 10%;
+    right: 0;
+    z-index: 30;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    transition: ease-in-out;
+    animation-duration: 1s;
+    animation-name: slidein;
+
+
+    .burger-contain {
+      display: flex;
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 45;
+      justify-content: flex-start;
+      align-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      color: black;
+    }
+  }
+
+  .slideOut {
+    display: flex;
+    position: absolute;
+    background: $green-light;
+    top: 10%;
+    right: 0;
+    z-index: 20;
+    justify-content: flex-start;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    transition: ease-in-out;
+    animation-duration: 1s;
+    animation-name: slideout;
+  }
+
+  @keyframes slidein {
+    from {
+      height: 0;
+      opacity: 0;
+    }
+    to {
+      height: 90%;
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideout {
+    from {
+      height: 90%;
+      opacity: 1;
+    }
+    to {
+      height: 0;
+      opacity: 0;
+    }
+  }
+}

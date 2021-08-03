@@ -1,0 +1,33 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "npx sequelize db:create && npx sequelize-cli db:migrate && nodemon -L server.js",
+    "test": "jasmine",
+    "test-init": "jasmine examples"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "dotenv": "^9.0.2",
+    "jasmine": "^3.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "sequelize": "^6.6.5"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "crypto-random-string": "^3.3.1",
+    "express": "^4.17.1",
+    "mariadb": "^2.5.4",
+    "mime": "^2.5.2",
+    "mysql2": "^2.2.5",
+    "nodejs-password": "^1.0.2",
+    "passport": "^0.4.1",
+    "request": "^2.88.2",
+    "swagger-ui-express": "^4.1.6",
+    "unirest": "^0.6.0"
+  }
+}

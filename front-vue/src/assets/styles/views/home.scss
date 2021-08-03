@@ -1,0 +1,15 @@
+.home {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  width: 100vw;
+  height: 100vh;
+  padding: 2%;
+  justify-content: space-between;
+}
+
+@media (max-width: 414px) {
+  .home {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,235 @@
+.modal-print {
+  position: absolute;
+  z-index: 10;
+  bottom: 3%;
+  right: 3%;
+  height: fit-content;
+  width: auto;
+  border-radius: 13px;
+  background-color: $green-light;
+  padding: 15px;
+}
+
+.modal-print:hover {
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+  cursor: pointer;
+  background-color: black;
+
+  svg {
+    path {
+      fill: $green-light;
+    }
+  }
+}
+
+.modal-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  background-color: rgba(196,196,196, 0.5);
+  backdrop-filter: blur(14px);
+  z-index: 20;
+
+  .modal {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 90%;
+    width: 90%;
+    border-radius: 44px;
+    background-color: $white;
+    backdrop-filter: blur(5px);
+    padding: 5% 8% 2em 10%;
+
+    .print {
+      display: flex;
+      margin-top: 10px;
+      margin-left: auto;
+      width: 70px;
+      height: 40px;
+      background: $green-dark;
+      color: $white;
+      align-content: center;
+      align-items: center;
+      justify-content: center;
+      border-radius: 7px;
+      cursor: pointer;
+
+      &:hover {
+        background: $green-light;
+        color: $green-dark;
+      }
+    }
+
+    .modal-cross {
+      position: absolute;
+      display: flex;
+      top: 20px;
+      right: 20px;
+      justify-content: center;
+      align-items: center;
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      padding: 10px;
+      background-color: transparent;
+      border: 2px solid black;
+    }
+
+    .modal-cross:hover {
+      cursor: pointer;
+      width: 45px;
+      height: 45px;
+    }
+
+    .modal-container {
+      height: 100%;
+      overflow: auto;
+
+      ul {
+        margin: 0;
+        padding: 0;
+        li {
+          list-style: none;
+          margin: 10px 0 10px 0;
+        }
+      }
+
+      .modal-detail {
+        margin-top: 15px;
+        background-color: $green-light;
+        border-radius: 7px;
+        padding: 15px;
+
+        .modal-date {
+          display: flex;
+          flex-direction: row;
+          width: 330px;
+          align-items: baseline;
+
+          .title {
+            color: $green-dark;
+          }
+
+          h3 {
+            margin-right: 10px;
+          }
+
+          .no-date {
+            font-size: 15px;
+            color: $grey-light;
+          }
+        }
+
+        .modal-trip {
+          display: flex;
+          flex-direction: row;
+          width: 500px;
+          align-items: baseline;
+          margin-top: 15px;
+
+          .title {
+            color: $green-dark;
+          }
+
+          h3 {
+            margin-right: 10px;
+          }
+
+          .no-trip {
+            font-size: 15px;
+            color: $grey-light;
+          }
+        }
+      }
+
+      .recap {
+        margin-top: 25px;
+      }
+
+      .line {
+        width: 100%;
+        height: 2px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        background-color: black;
+      }
+
+      .addHistory {
+
+        .history {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 10px;
+          .history-icon {
+            display: flex;
+            background: $green-light;
+            border-radius: 7px;
+            width: 60px;
+            height: 60px;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+              width: 35px;
+              height: 35px;
+            }
+          }
+          .history-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            position: relative;
+            height: 100px;
+            background: $green-light;
+            border-radius: 7px;
+            padding: 7px 7px 7px 44px;
+            width: 90%;
+
+            p {
+              font-size: 15px;
+            }
+
+            #mdiv {
+              width: 25px;
+              height: 25px;
+              position: absolute;
+              top: -10px;
+              right: -10px;
+              background-color: $green-dark;
+              border-radius: 50%;
+              padding-top: 3px;
+              cursor: pointer;
+              .mdiv {
+                height: 20px;
+                width: 2px;
+                margin-left: 12px;
+                background-color: $white;
+                transform: rotate(45deg);
+                Z-index: 1;
+                .md {
+                  height: 20px;
+                  width: 2px;
+                  background-color: $white;
+                  transform: rotate(90deg);
+                  Z-index: 2;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      h1 {
+        font-size: 42px;
+        font-weight: bold;
+      }
+    }
+  }
+}

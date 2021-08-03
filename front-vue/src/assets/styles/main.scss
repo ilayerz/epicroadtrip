@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+@import
+  'abstracts/functions',
+  'abstracts/helpers',
+  'abstracts/keyframes',
+  'abstracts/mixins',
+  'abstracts/variables';
+
+@import
+  'base/reset';
+
+@import
+'views/home';
+
+@import
+'components/user',
+'components/map-side',
+'components/user-side',
+'components/map-print',
+'components/modal-routes',
+'components/card-modal',
+'components/burger-menu',
+'components/tutorial';
