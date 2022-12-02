@@ -25,7 +25,7 @@
     "mime": "^2.5.2",
     "mysql2": "^2.2.5",
     "nodejs-password": "^1.0.2",
-    "passport": "^0.4.1",
+    "passport": "^0.6.0",
     "request": "^2.88.2",
     "swagger-ui-express": "^4.1.6",
     "unirest": "^0.6.0"
